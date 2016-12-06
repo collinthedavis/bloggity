@@ -1,4 +1,4 @@
 class Post < ApplicationRecord
 	validates_presence_of :title, :body, :date
-	validates_uniqueness :title
+	validates_uniqueness_of :title
 end
