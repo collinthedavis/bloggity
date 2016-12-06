@@ -1,0 +1,10 @@
+<h1>Posts#index</h1>
+<% @posts.each do |post| %>
+	<p>Title: <%= link_to post.title, post_path(post) %></p>
+
+	<p>Posted <%= time_ago_in_words(post.created_at) %> ago <%= post.created_at.strftime("%B %d, %Y") %></p>
+	<%= post.body %><br>
+
+	<%= post.date %><br>
+	<hr>
+<% end %>
